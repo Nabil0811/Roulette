@@ -1,0 +1,240 @@
+/* Style général */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Navigation */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-menu a:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Conteneurs */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.class-selection {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+}
+
+/* Formulaires et boutons */
+form {
+    margin-bottom: 20px;
+}
+
+select, input[type="submit"] {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+select {
+    background-color: white;
+    min-width: 150px;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Zone de tirage */
+#tirage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+#tirage form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#tirage input[name="spin"] {
+    background-color: #e74c3c;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+#tirage input[name="reset"] {
+    background-color: #95a5a6;
+}
+
+#elu {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e74c3c;
+    margin: 15px 0;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(231, 76, 60, 0.1);
+    border-radius: 5px;
+}
+
+/* Tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e9f7fe;
+}
+
+/* Liste des élèves */
+#listeEleves0, #listeEleves {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Stats section */
+.stats-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f1f8fe;
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+}
+
+.stats-title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.stat-card.best {
+    border-bottom: 3px solid #2ecc71;
+}
+
+.stat-card.worst {
+    border-bottom: 3px solid #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #tirage form {
+        flex-direction: column;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
